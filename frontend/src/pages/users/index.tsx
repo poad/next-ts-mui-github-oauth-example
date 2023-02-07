@@ -1,14 +1,14 @@
 import Head from 'next/head';
-import GitHubSignInButton from '../component/GitHubSignInButton';
-import styles from '../styles/Home.module.css';
+import GitHubSignInButton from '../../component/GitHubSignInButton';
+import styles from '../../styles/Home.module.css';
 import { useCallback, useEffect, useState } from 'react';
-import qs from 'qs';
-import Link from '@mui/material/Link';
+import { useGitHubOAuthCode } from '../../hooks/useGitHubOAuthCode';
+import Link from 'next/link';
 
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
 export default function Users() {
-  const [code, setCode] = useState<string>();
+  const code = useGitHubOAuthCode();
   const [databaseId, setDatabaseId] = useState<number>();
 
   const fetcher = useCallback(async (code: string) => {
@@ -30,10 +30,6 @@ export default function Users() {
     }
   }, [code]);
 
-  useEffect(() => {
-    setCode(qs.parse(window.location.search).code?.toString());
-  }, []);
-
   return (
     <>
       <Head>
@@ -49,7 +45,10 @@ export default function Users() {
           ) : !databaseId ? (
             'loading...'
           ) : (
-            `Your databaseId: ${databaseId}`
+            <>
+              Your databaseId:{' '}
+              <Link href={`/users/${databaseId}`}>{databaseId}</Link>
+            </>
           )}
         </div>
         <div className='grid'>
