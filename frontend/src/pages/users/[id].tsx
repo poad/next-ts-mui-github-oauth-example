@@ -19,7 +19,13 @@ export default function User() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>Your ID is {id}</div>
-        <div className='grid'>
+        <div>
+          <div className={styles.grid}>Route: {router.route}</div>
+          <div className={styles.grid}>Pathname:{router.pathname}</div>
+          <div className={styles.grid}>asPath: {router.asPath}</div>
+          <div className={styles.grid}>Query: {JSON.stringify(router.query)}</div>
+        </div>
+        <div className={styles.grid}>
           <Link href="/">TOP</Link>
         </div>
       </main>
