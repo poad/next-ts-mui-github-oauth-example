@@ -23,7 +23,9 @@ export default function User() {
           <div className={styles.grid}>Route: {router.route}</div>
           <div className={styles.grid}>Pathname:{router.pathname}</div>
           <div className={styles.grid}>asPath: {router.asPath}</div>
-          <div className={styles.grid}>Query: {JSON.stringify(router.query)}</div>
+          <div className={styles.grid}>
+            Query: {JSON.stringify(router.query)}
+          </div>
         </div>
         <div className={styles.grid}>
           <Link href="/">TOP</Link>
