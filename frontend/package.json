@@ -20,6 +20,7 @@
     "prebuild": "pnpm lint",
     "preexport": "pnpm build",
     "predev": "pnpm install",
+    "postinstall": "typewind generate",
     "all": "pnpm build && pnpm export"
   },
   "dependencies": {
@@ -53,6 +54,7 @@
     "rimraf": "*",
     "rome": "*",
     "tailwindcss": "*",
+    "typewind": "*",
     "uuid": "*"
   },
   "resolutions": {
