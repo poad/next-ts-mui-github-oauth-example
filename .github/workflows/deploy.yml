@@ -20,7 +20,7 @@ jobs:
   test:
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +37,7 @@ jobs:
       shell: bash
       run: |
         corepack enable && \
-        corepack prepare pnpm@7.27.0 --activate
+        corepack prepare pnpm@8.4.0 --activate
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3.6.0
@@ -45,11 +45,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
         cache: pnpm
-        cache-dependency-path: |
-          pnpm-lock.yaml
-          backend/pnpm-lock.yaml
-          frontend/pnpm-lock.yaml
-          frontend/cdk/pnpm-lock.yaml
 
     - name: Get pnpm store directory
       id: pnpm-cache
@@ -72,7 +67,7 @@ jobs:
 
     - name: Install global packages
       run: |
-        pnpm add -g aws-cdk
+        npm -g i aws-cdk
 
     - name: deploy (cdk)
       working-directory: backend
