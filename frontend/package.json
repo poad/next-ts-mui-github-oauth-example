@@ -31,7 +31,7 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
     "@next/font": "^13.3.4",
-    "@types/node": "^18.16.3",
+    "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/uuid": "^9.0.1",
     "next": "^13.3.4",
