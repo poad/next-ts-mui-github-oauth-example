@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
               tree thanks to React context. */}
 
         <CssBaseline />
-        <Component />
+        <Component {...pageProps} />
       </ThemeProvider>
     </NoSsr>
   );
