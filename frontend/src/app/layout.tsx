@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import NoSsr from 'react-no-ssr';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './styles/theme';
+import StyledJsxRegistry from './registry';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -18,13 +19,15 @@ export default function Layout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <NoSsr>
-          <ThemeProvider theme={theme}>
-            {/* ThemeProvider makes the theme available down the React
+          <StyledJsxRegistry>
+            <ThemeProvider theme={theme}>
+              {/* ThemeProvider makes the theme available down the React
                   tree thanks to React context. */}
 
-            <CssBaseline />
-            {children}
-          </ThemeProvider>
+              <CssBaseline />
+              {children}
+            </ThemeProvider>
+          </StyledJsxRegistry>
         </NoSsr>
       </body>
     </html>
