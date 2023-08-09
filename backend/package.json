@@ -15,8 +15,6 @@
     "lint": "pnpm format-check && pnpm check",
     "lint-fix": "pnpm format && pnpm check-fix",
     "clean": "rimraf build",
-    "prelint": "pnpm install",
-    "prelint-fix": "pnpm install",
     "prebuild": "pnpm lint"
   },
   "devDependencies": {

@@ -14,6 +14,12 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
+pnpm install -r && pnpm up -r && pnpm lint-fix && pnpm build
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}"
+  exit $result
+fi
 cd "${CURRENT}/backend"
 result=$?
 if [ $result -ne 0 ]; then
@@ -56,6 +62,14 @@ if [ $result -ne 0 ]; then
   cd "${CUR}"
   exit $result
 fi
+cd "${CURRENT}/"
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}"
+  exit $result
+fi
+echo ""
+pwd
 git commit -am "Bumps node modules" && git push
 result=$?
 if [ $result -ne 0 ]; then

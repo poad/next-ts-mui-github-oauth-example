@@ -38,7 +38,7 @@ jobs:
       id: pnpm-install
       with:
         run_install: |
-          - recursive: false
+          - recursive: true
             args: [--no-frozen-lockfile]
           - args: [--global, aws-cdk]
 
