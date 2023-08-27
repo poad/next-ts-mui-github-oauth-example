@@ -8,11 +8,11 @@ const GITHUB_OAUTH_CLIENT_SECRET = process.env
   .GITHUB_OAUTH_CLIENT_SECRET as string;
 
 const QUERY = gql`
-query {
-	viewer {
-    databaseId
+  query {
+    viewer {
+      databaseId
+    }
   }
-}
 `;
 
 type AccessTokenResponse = {
@@ -53,15 +53,14 @@ const accessToken = async (code: string): Promise<AccessTokenResponse> => {
   return response.json() as Promise<AccessTokenResponse>;
 };
 
-const graphqlRequest = async (token: string): Promise<GraphQLResponse> => {
-  return client.request<GraphQLResponse>(
+const graphqlRequest = async (token: string): Promise<GraphQLResponse> =>
+  client.request<GraphQLResponse>(
     QUERY,
     {},
     {
       authorization: `token ${token}`,
     },
   );
-};
 
 export const handler = async (
   event: APIGatewayProxyEvent,
@@ -70,7 +69,6 @@ export const handler = async (
     const code = qs.parse(event.body).code?.toString();
     if (code) {
       const tokenResp = await accessToken(code);
-      console.log(JSON.stringify(tokenResp));
       const token = tokenResp.access_token;
       if (!token) {
         return {
@@ -86,7 +84,6 @@ export const handler = async (
 
       const response = await graphqlRequest(token);
       if (response instanceof GraphQLError) {
-        console.log(JSON.stringify(response));
         return {
           statusCode: 500,
           headers: {
@@ -95,7 +92,7 @@ export const handler = async (
           body: JSON.stringify(response),
         };
       }
-      const databaseId = response.viewer.databaseId;
+      const { databaseId } = response.viewer;
       return {
         statusCode: 200,
         headers: {

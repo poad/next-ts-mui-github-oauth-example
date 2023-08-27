@@ -35,7 +35,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
 
-    - name: Build
+    - name: Build (cdk)
+      run: pnpm build
+
+    - name: Build (frontend)
       env:
         CI: true
-      run: pnpm build
+      working-directory: frontend
+      run: pnpm -r build

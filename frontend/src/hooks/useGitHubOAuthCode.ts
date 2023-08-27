@@ -7,6 +7,6 @@ export const useGitHubOAuthCode = () => {
     if (!code) {
       setCode(qs.parse(window.location.search).code?.toString());
     }
-  }, [window.location.search]);
+  }, [code]);
   return code;
 };
