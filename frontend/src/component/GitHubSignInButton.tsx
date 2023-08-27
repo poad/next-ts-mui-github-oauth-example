@@ -27,7 +27,7 @@ const signIn = () => {
 export const GitHubSignInButton = () => {
   return (
     <Button
-      variant='outlined'
+      variant="outlined"
       onClick={() => signIn()}
       className={inter.className}
     >

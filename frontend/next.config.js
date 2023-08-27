@@ -5,6 +5,11 @@ const config =  {
   swcMinify: true,
   trailingSlash: true,
   cleanDistDir: true,
+  modularizeImports: {
+    '@mui/icons-material': {
+      transform: '@mui/icons-material/{{member}}',
+    },
+  },
   images: {
     unoptimized: true,
   },
