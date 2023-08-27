@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
 import StyledJsxRegistry from './registry';
-import './globals.css';
+import './layout.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

@@ -1,11 +1,11 @@
 'use client';
 
-import { Metadata } from 'next';
-import GitHubSignInButton from '../component/GitHubSignInButton';
-import styles from './Home.module.css';
 import { useCallback, useEffect, useState } from 'react';
-import { useGitHubOAuthCode } from '../hooks/useGitHubOAuthCode';
+import { Metadata } from 'next';
 import Link from 'next/link';
+import GitHubSignInButton from '../component/GitHubSignInButton';
+import { useGitHubOAuthCode } from '../hooks/useGitHubOAuthCode';
+import './page.css';
 
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
@@ -25,7 +25,7 @@ export default function Users() {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `code=${encodeURIComponent(code)}`,
+      body: new URLSearchParams([['code', code]]).toString(),
     });
   }, []);
 
@@ -39,8 +39,8 @@ export default function Users() {
 
   return (
     <>
-      <main className={styles.main}>
-        <div className={styles.description}>
+      <main className=".main">
+        <div className=".description">
           {!(code || databaseId) ? (
             <GitHubSignInButton />
           ) : !databaseId ? (

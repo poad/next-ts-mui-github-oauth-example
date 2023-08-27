@@ -32,16 +32,13 @@ type GraphQLResponse =
 const client = new GraphQLClient('https://api.github.com/graphql');
 
 const accessToken = async (code: string): Promise<AccessTokenResponse> => {
-  const params = {
-    client_id: GITHUB_OAUTH_CLIENT_ID,
-    client_secret: GITHUB_OAUTH_CLIENT_SECRET,
-    code,
-  };
-  const queryString = Object.entries(params)
-    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-    .join('&');
+  const queryString = new URLSearchParams([
+    ['client_id', GITHUB_OAUTH_CLIENT_ID],
+    ['client_secret', GITHUB_OAUTH_CLIENT_SECRET],
+    ['code', code],
+  ]);
   const response = await fetch(
-    `https://github.com/login/oauth/access_token?${queryString}`,
+    `https://github.com/login/oauth/access_token?${queryString.toString()}`,
     {
       method: 'POST',
       headers: {

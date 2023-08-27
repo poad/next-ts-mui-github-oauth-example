@@ -2,7 +2,7 @@
 
 import styles from '../../styles/Home.module.css';
 import Link from '@mui/material/Link';
-import { useRouter } from 'next/router';
+import { usePathname, useParams, useSearchParams } from 'next/navigation';
 import { Metadata } from 'next';
 
 type Props = {
@@ -18,20 +18,17 @@ export async function generateMetadata({
 }
 
 export default function User() {
-  const router = useRouter();
-  const { id } = router.query;
+  const { params } = useParams();
+  const pathname = usePathname();
+  const query = useSearchParams();
 
   return (
     <>
       <main className={styles.main}>
-        <div className={styles.description}>Your ID is {id}</div>
+        <div className={styles.description}>Your ID is {params}</div>
         <div>
-          <div className={styles.grid}>Route: {router.route}</div>
-          <div className={styles.grid}>Pathname:{router.pathname}</div>
-          <div className={styles.grid}>asPath: {router.asPath}</div>
-          <div className={styles.grid}>
-            Query: {JSON.stringify(router.query)}
-          </div>
+          <div className={styles.grid}>Pathname:{pathname}</div>
+          <div className={styles.grid}>Query: {JSON.stringify(query)}</div>
         </div>
         <div className={styles.grid}>
           <Link href="/">TOP</Link>

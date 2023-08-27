@@ -12,16 +12,13 @@ const signIn = () => {
   const uuid = uuidv4();
   const state = crypto.createHash('sha512').update(uuid).digest('hex');
 
-  const params = {
-    client_id: NEXT_PUBLIC_GITHUB_CLIENT_ID,
-    redirect_uri: window.location.href,
-    state,
-    allow_signup: false,
-  };
-  const queryString = Object.entries(params)
-    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-    .join('&');
-  window.location.href = `https://github.com/login/oauth/authorize?${queryString}`;
+  const queryString = new URLSearchParams([
+    ['client_id', NEXT_PUBLIC_GITHUB_CLIENT_ID],
+    ['redirect_uri', window.location.href],
+    ['state', state],
+    ['allow_signup', 'false'],
+  ]);
+  window.location.href = `https://github.com/login/oauth/authorize?${queryString.toString()}`;
 };
 
 export const GitHubSignInButton = () => {
