@@ -138,3 +138,5 @@ yarn-error.log*
 !.yarn/versions
 
 !*.config.js
+
+!.storybook/public/mockServiceWorker.js

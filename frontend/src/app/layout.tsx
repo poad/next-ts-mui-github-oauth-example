@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import NoSsr from 'react-no-ssr';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
 import StyledJsxRegistry from './registry';
@@ -20,18 +19,13 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="theme-color" content={theme.palette.primary.main} />
-      </head>
       <body>
-        <NoSsr>
-          <StyledJsxRegistry>
-            <ThemeProvider theme={theme}>
-              <CssBaseline />
-              {children}
-            </ThemeProvider>
-          </StyledJsxRegistry>
-        </NoSsr>
+        <StyledJsxRegistry>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </ThemeProvider>
+        </StyledJsxRegistry>
       </body>
     </html>
   );

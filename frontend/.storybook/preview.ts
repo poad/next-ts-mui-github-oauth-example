@@ -4,7 +4,7 @@ import React from 'react';
 
 import { withThemeByClassName } from '@storybook/addon-styling';
 
-import '../src/styles/globals.css';
+import '../src/app/globals.css';
 
 // Initialize MSW
 initialize();
