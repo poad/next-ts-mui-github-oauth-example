@@ -49,11 +49,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         check-latest: true
 
-    - name: Setup global dir for pnpm
-      shell: bash
-      run: |
-        echo "PNPM_HOME=/usr/local/bin" >> $GITHUB_ENV
-
     - name: deploy (cdk)
       working-directory: backend
       run: |
