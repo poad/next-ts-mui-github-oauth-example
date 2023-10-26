@@ -15,16 +15,7 @@ export const nextJsExport = ({
       });
     }
   });
-  ['pnpm install'].forEach((cmd) => {
-    childProcess.execSync(cmd, {
-      cwd: `${process.cwd()}/../`,
-      stdio: ['ignore', 'inherit', 'inherit'],
-      env: { ...process.env },
-      shell: 'bash',
-    });
-  });
-
-  ['pnpm all'].forEach((cmd) => {
+  ['pnpm install', 'pnpm all'].forEach((cmd) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/../`,
       stdio: ['ignore', 'inherit', 'inherit'],
