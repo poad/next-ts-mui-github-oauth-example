@@ -34,7 +34,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3",
-    "web-vitals": "^3.5.1"
+    "web-vitals": "^3.5.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.10",
@@ -67,7 +67,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.15",
-    "msw": "^2.1.4",
+    "msw": "^2.1.5",
     "msw-storybook-addon": "^1.10.0",
     "postcss": "^8.4.33",
     "prettier": "^3.2.4",
