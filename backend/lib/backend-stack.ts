@@ -59,7 +59,6 @@ export class BackendStack extends cdk.Stack {
         inlinePolicies: {
           'logs-policy': new iam.PolicyDocument({
             statements: [
-              // eslint-disable-next-line no-new
               new iam.PolicyStatement({
                 effect: iam.Effect.ALLOW,
                 actions: ['logs:CreateLogStream', 'logs:PutLogEvents'],
@@ -94,7 +93,6 @@ export class BackendStack extends cdk.Stack {
 
     api.root.addMethod('POST', new apigateway.LambdaIntegration(fn));
 
-    // eslint-disable-next-line no-new
     new apigateway.GatewayResponse(this, 'UnauthorizedGatewayResponse', {
       restApi: api,
       type: apigateway.ResponseType.UNAUTHORIZED,
@@ -104,7 +102,6 @@ export class BackendStack extends cdk.Stack {
       },
     });
 
-    // eslint-disable-next-line no-new
     new apigateway.GatewayResponse(this, 'ClientErrorGatewayResponse', {
       restApi: api,
       type: apigateway.ResponseType.DEFAULT_4XX,
@@ -113,7 +110,6 @@ export class BackendStack extends cdk.Stack {
       },
     });
 
-    // eslint-disable-next-line no-new
     new apigateway.GatewayResponse(this, 'ServerErrorGatewayResponse', {
       restApi: api,
       type: apigateway.ResponseType.DEFAULT_5XX,
@@ -122,7 +118,6 @@ export class BackendStack extends cdk.Stack {
       },
     });
 
-    // eslint-disable-next-line no-new
     new ssm.StringParameter(this, 'ApiEndpointParameter', {
       parameterName,
       stringValue: api.url,

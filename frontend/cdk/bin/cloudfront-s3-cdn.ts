@@ -18,7 +18,6 @@ nextJsExport({
   apiUrl,
 });
 
-// eslint-disable-next-line no-new
 new NextCloudFrontTemplateStack(app, `${appName}-stack`, {
   appName,
 });

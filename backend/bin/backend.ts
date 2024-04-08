@@ -11,7 +11,6 @@ const clientSecret = app.node.tryGetContext('clientSecret');
 
 const appName = 'next-github-auth-ssg-example';
 
-// eslint-disable-next-line no-new
 new BackendStack(app, `${appName}-backend-stack`, {
   appName,
   parameterName,
