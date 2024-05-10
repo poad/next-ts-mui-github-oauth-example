@@ -9,7 +9,6 @@ import './page.css';
 
 const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const metadata: Metadata = {
   title: 'Users',
 };
