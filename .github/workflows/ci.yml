@@ -41,4 +41,4 @@ jobs:
       env:
         CI: true
       working-directory: frontend
-      run: pnpm -r build
+      run: pnpm lint && pnpm -r build

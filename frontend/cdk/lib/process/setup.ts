@@ -15,7 +15,7 @@ export const nextJsExport = ({
       });
     }
   });
-  ['pnpm install', 'pnpm all'].forEach((cmd) => {
+  ['pnpm install', 'pnpm build'].forEach((cmd) => {
     childProcess.execSync(cmd, {
       cwd: `${process.cwd()}/../`,
       stdio: ['ignore', 'inherit', 'inherit'],

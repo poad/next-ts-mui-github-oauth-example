@@ -119,7 +119,6 @@ export class NextCloudFrontTemplateStack extends cdk.Stack {
       }),
     );
 
-    // eslint-disable-next-line no-new
     new deployment.BucketDeployment(this, 'DeployWebsite', {
       sources: [deployment.Source.asset(`${process.cwd()}/../out`)],
       destinationBucket: s3bucket,
@@ -130,7 +129,6 @@ export class NextCloudFrontTemplateStack extends cdk.Stack {
       role: deployRole,
     });
 
-    // eslint-disable-next-line no-new
     new cdk.CfnOutput(this, 'AccessURLOutput', {
       value: `https://${distoribution.distributionDomainName}`,
     });

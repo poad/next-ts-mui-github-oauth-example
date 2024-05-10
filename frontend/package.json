@@ -13,10 +13,9 @@
     "style:fix": "prettier --write src",
     "lint": "pnpm run --parallel /^.*:check$/",
     "lint-fix": "pnpm run /^.*:fix$/",
-    "prebuild": "pnpm lint-fix",
     "predev": "pnpm lint-fix",
     "prestart": "pnpm build",
-    "all": "pnpm build",
+    "all": "pnpm lint-fix && pnpm build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
