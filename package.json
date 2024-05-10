@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
-    "lint-fix": "pnpm -r lint-fix",
-    "prelint-fix": "pnpm -r install",
-    "prebuild": "pnpm -r install"
+    "lint-fix": "pnpm -r lint-fix"
   },
   "keywords": [],
   "author": "",

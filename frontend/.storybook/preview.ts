@@ -19,17 +19,6 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [
-    // NOTE: requires setting "darkMode" to "class" in your tailwind config
-    withThemeByClassName({
-      themes: {
-        light: 'light',
-        dark: 'dark',
-      },
-      defaultTheme: 'light',
-    }),
-  ],
-  // Provide the MSW addon loader globally
   loaders: [mswLoader],
 };
 
