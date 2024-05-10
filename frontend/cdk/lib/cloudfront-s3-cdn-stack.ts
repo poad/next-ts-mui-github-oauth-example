@@ -1,4 +1,3 @@
-/* eslint-disable no-new */
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as origin from 'aws-cdk-lib/aws-cloudfront-origins';

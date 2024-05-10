@@ -7,8 +7,7 @@
     "target": "esnext",
     "module": "esnext",
     "lib": [
-      "esnext",
-      "dom"
+      "esnext"
     ],
     "moduleResolution": "bundler",
     "declaration": true,

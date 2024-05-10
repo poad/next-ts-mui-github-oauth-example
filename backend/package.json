@@ -9,19 +9,17 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "eslint:check": "eslint ./{bin,lib,lambda}/**/*.ts",
-    "eslint:fix": "eslint ./{bin,lib,lambda}/**/*.ts --fix",
     "style:check": "prettier --write lambda bin lib",
     "style:fix": "prettier --write lambda bin lib",
+    "eslint:check": "eslint './{bin,lib,lambda}/**/*.ts'",
+    "eslint:fix": "eslint --fix './{bin,lib,lambda}/**/*.ts'",
     "lint": "pnpm run --parallel /^.*:check$/",
     "lint-fix": "pnpm run /^.*:fix$/",
-    "clean": "rimraf build",
-    "prebuild": "pnpm lint"
+    "clean": "rimraf build"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.137",
     "@types/node": "^20.12.11",
-    "@types/qs": "^6.9.15",
     "aws-cdk": "^2.141.0",
     "esbuild": "^0.21.1",
     "ts-node": "^10.9.2",
@@ -32,13 +30,7 @@
     "aws-lambda": "^1.0.7",
     "constructs": "^10.3.0",
     "graphql": "^16.8.1",
-    "graphql-request": "^6.1.0",
-    "qs": "^6.12.1",
+    "graphql-request": "^7.0.0",
     "source-map-support": "^0.5.21"
-  },
-  "engines": {
-    "npm": "use pnpm please!",
-    "yarn": "use pnpm please!",
-    "pnpm": ">=8.7.0"
   }
 }
