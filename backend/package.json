@@ -11,8 +11,8 @@
     "cdk": "cdk",
     "style:check": "prettier --write lambda bin lib",
     "style:fix": "prettier --write lambda bin lib",
-    "eslint:check": "eslint",
-    "eslint:fix": "eslint --fix",
+    "eslint:check": "eslint './{bin,lib,lambda}/**/*.ts'",
+    "eslint:fix": "eslint --fix './{bin,lib,lambda}/**/*.ts'",
     "lint": "pnpm run --parallel /^.*:check$/",
     "lint-fix": "pnpm run /^.*:fix$/",
     "clean": "rimraf build"
