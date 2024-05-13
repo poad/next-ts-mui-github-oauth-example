@@ -1,6 +1,5 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
-import { GraphQLError } from 'graphql';
-import { GraphQLClient, gql } from 'graphql-request';
+import { Client, gql, cacheExchange, fetchExchange } from '@urql/core';
 
 const GITHUB_OAUTH_CLIENT_ID = process.env.GITHUB_OAUTH_CLIENT_ID as string;
 const GITHUB_OAUTH_CLIENT_SECRET = process.env
@@ -20,15 +19,11 @@ type AccessTokenResponse = {
   token_type: string;
 };
 
-type GraphQLResponse =
-  | {
-      viewer: {
-        databaseId: number;
-      };
-    }
-  | GraphQLError;
-
-const client = new GraphQLClient('https://api.github.com/graphql');
+type GraphQLResponse = {
+  viewer: {
+    databaseId: number;
+  };
+};
 
 const accessToken = async (code: string): Promise<AccessTokenResponse> => {
   const queryString = new URLSearchParams([
@@ -49,14 +44,19 @@ const accessToken = async (code: string): Promise<AccessTokenResponse> => {
   return response.json() as Promise<AccessTokenResponse>;
 };
 
-const graphqlRequest = async (token: string): Promise<GraphQLResponse> =>
-  client.request<GraphQLResponse>(
-    QUERY,
-    {},
-    {
-      authorization: `token ${token}`,
+const graphqlRequest = async (token: string) => {
+  const client = new Client({
+    url: 'https://api.github.com/graphql',
+    exchanges: [cacheExchange, fetchExchange],
+    fetchOptions: () => {
+      return {
+        headers: { authorization: token ? `Bearer ${token}` : '' },
+      };
     },
-  );
+  });
+
+  return await client.query<GraphQLResponse, object>(QUERY, {}).toPromise();
+};
 
 export const handler = async (
   event: APIGatewayProxyEvent,
@@ -79,16 +79,16 @@ export const handler = async (
       }
 
       const response = await graphqlRequest(token);
-      if (response instanceof GraphQLError) {
+      if (response.error) {
         return {
           statusCode: 500,
           headers: {
             'Access-Control-Allow-Origin': '*',
           },
-          body: JSON.stringify(response),
+          body: JSON.stringify(response.error),
         };
       }
-      const { databaseId } = response.viewer;
+      const { databaseId } = response.data?.viewer ?? {};
       return {
         statusCode: 200,
         headers: {
