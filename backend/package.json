@@ -18,7 +18,7 @@
     "clean": "rimraf build"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.142",
+    "@types/aws-lambda": "^8.10.143",
     "@types/node": "^22.1.0",
     "@urql/core": "^5.0.5",
     "aws-cdk": "^2.151.0",
