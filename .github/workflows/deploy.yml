@@ -66,7 +66,7 @@ jobs:
       working-directory: frontend/cdk
       run: |
         cdk deploy \
-          -c appkName=next-ts-mui-github-oauth-example \
+          -c appName=next-ts-mui-github-oauth-example \
           -c clientId=${{ secrets.NEXT_PUBLIC_GITHUB_CLIENT_ID }} \
           -c apiUrl=${{ steps.get-param.outputs.value }}
 

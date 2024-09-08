@@ -8,7 +8,7 @@ const app = new cdk.App();
 
 const env = app.node.tryGetContext('env');
 const appName =
-  app.node.tryGetContext('appkName') ||
+  app.node.tryGetContext('appName') ??
   `${env ? `${env}-` : ''}next-cloudfront-template`;
 const clientId = app.node.tryGetContext('clientId');
 const apiUrl = app.node.tryGetContext('apiUrl');
