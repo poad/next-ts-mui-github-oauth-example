@@ -8,7 +8,6 @@ import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 // @ts-expect-error ignore
 import importPlugin from 'eslint-plugin-import';
 
-import prettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 import { FlatCompat } from '@eslint/eslintrc';
 
@@ -29,19 +28,20 @@ export default tseslint.config(
       'src/**/*.css'
     ],
   },
-  {
-    files: ['src/**/*.{jsx,ts,tsx}'],
-  },
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   ...compat.config({
     extends: ['plugin:storybook/recommended'],
     ignorePatterns: ['!.storybook', 'storybook-static'],
   }),
   {
-    files: ['src/**/*.{jsx,tsx}'],
+    files: ['src/**/*.{jsx,ts,tsx}'],
+    ...importPlugin.flatConfigs.recommended,
+    ...importPlugin.flatConfigs.typescript,
     plugins: {
-      ['jsx-a11y']: jsxA11yPlugin,
+      '@next/next': nextPlugin,
+      'jsx-a11y': jsxA11yPlugin,
     },
     extends: [
       ...compat.config(reactHooksPlugin.configs.recommended),
@@ -56,55 +56,18 @@ export default tseslint.config(
         { name: 'Link', linkAttribute: 'to' },
         { name: 'NavLink', linkAttribute: 'to' },
       ],
-      'import/resolver': {
-        typescript: {},
-      },
-    },
-  },
-  {
-    files: ['src/**/*.{ts,tsx}'],
-    plugins: {
-      import: importPlugin,
-    },
-    extends: [
-      ...tseslint.configs.recommended,
-      ...compat.config(importPlugin.configs.recommended),
-      ...compat.config(importPlugin.configs.typescript),
-    ],
-    settings: {
       'import/internal-regex': '^~/',
       'import/resolver': {
-        node: {
-          extensions: ['.ts', '.tsx'],
-        },
-        typescript: {
-          alwaysTryTypes: true,
-        },
+        node: true,
+        typescript: true,
       },
     },
-  },
-  {
-    files: ['src/**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      '@next/next': nextPlugin,
-    },
-    // @ts-expect-error ignore
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
       '@next/next/no-duplicate-head': 'off',
       '@next/next/no-img-element': 'error',
       '@next/next/no-page-custom-font': 'off',
-    },
-  },
-  {
-    files: ['src/**/*.{js,jsx,ts,tsx}'],
-    rules: {
-      ...prettier.rules,
-    },
-  },
-  {
-    rules: {
       'react/display-name': 'off',
       'import/namespace': 'off',
       'import/no-named-as-default': 'off',

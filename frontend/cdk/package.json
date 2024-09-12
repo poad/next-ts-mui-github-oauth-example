@@ -9,12 +9,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "style:check": "prettier --write bin lib",
-    "style:fix": "prettier --write bin lib",
-    "eslint:check": "eslint './{bin,lib}/**/*.ts'",
-    "eslint:fix": "eslint --fix './{bin,lib}/**/*.ts'",
-    "lint": "pnpm run --parallel /^.*:check$/",
-    "lint-fix": "pnpm run /^.*:fix$/",
+    "lint-fix": "eslint --fix './{bin,lib}/**/*.ts'",
+    "lint": "eslint './{bin,lib}/**/*.ts'",
     "clean": "rimraf build"
   },
   "devDependencies": {

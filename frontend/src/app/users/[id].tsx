@@ -5,9 +5,9 @@ import Link from '@mui/material/Link';
 import { usePathname, useParams, useSearchParams } from 'next/navigation';
 import { Metadata } from 'next';
 
-type Props = {
+interface Props {
   params: { id: string };
-};
+}
 
 export async function generateMetadata({
   params: { id },

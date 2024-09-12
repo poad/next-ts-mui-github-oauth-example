@@ -13,17 +13,17 @@ const QUERY = gql`
   }
 `;
 
-type AccessTokenResponse = {
+interface AccessTokenResponse {
   access_token: string;
   scope: string;
   token_type: string;
-};
+}
 
-type GraphQLResponse = {
+interface GraphQLResponse {
   viewer: {
     databaseId: number;
   };
-};
+}
 
 const accessToken = async (code: string): Promise<AccessTokenResponse> => {
   const queryString = new URLSearchParams([
