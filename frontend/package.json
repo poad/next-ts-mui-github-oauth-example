@@ -43,7 +43,7 @@
     "@storybook/test": "^8.3.1",
     "@types/react-no-ssr": "^1.1.7",
     "autoprefixer": "^10.4.20",
-    "msw": "^2.4.7",
+    "msw": "^2.4.8",
     "msw-storybook-addon": "^2.0.3",
     "postcss": "^8.4.47",
     "storybook": "^8.3.1",

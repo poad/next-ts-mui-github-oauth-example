@@ -9,104 +9,16 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
-
-  - package-ecosystem: npm
-    directory: '/backend/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
     groups:
-      cdk-lambda:
-        patterns:
-          - 'aws-cdk*'
-          - '@aws-cdk/*'
-          - '@swc/*'
-          - 'constructs'
-          - 'esbuild'
-          - 'regenerator-runtime'
-          - 'source-map-support'
-          - 'ts-node'
-      eslint-prettier:
-        patterns:
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
-
-  - package-ecosystem: npm
-    directory: '/frontend/'
-    schedule:
-      interval: daily
-      timezone: Asia/Tokyo
-    allow:
-      - dependency-type: all
-    rebase-strategy: auto
-    assignees:
-      - poad
-    groups:
-      nextjs:
-        patterns:
-          - 'next'
-          - '@next/*'
-          - 'eslint-config-next'
-      eslint-prettier:
-        patterns:
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
-        exclude-patterns:
-          - 'eslint-config-next'
-          - 'eslint-plugin-storybook'
-      storybook-msw:
-        patterns:
-          - '@storybook/*'
-          - 'storybook'
-          - 'eslint-plugin-storybook'
-          - 'msw'
-          - 'msw-storybook-addon'
-      react:
-        patterns:
-          - '@types/react*'
-          - 'react*'
-      mui-emotion:
-        patterns:
-          - '@emotion/*'
-          - '@mui/*'
-      tailwindcss:
-        patterns:
-          - 'autoprefixer'
-          - 'postcss'
-          - 'tailwindcss'
-      misc:
+      actions:
         patterns:
           - '*'
-        exclude-patterns:
-          - 'next'
-          - '@next/*'
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
-          - '@storybook/*'
-          - 'storybook'
-          - 'msw'
-          - 'msw-storybook-addon'
-          - '@types/react*'
-          - 'react*'
-          - '@emotion/*'
-          - '@mui/*'
-          - 'autoprefixer'
-          - 'postcss'
-          - 'tailwindcss'
 
   - package-ecosystem: npm
-    directory: '/frontend/cdk/'
+    directories:
+      - '/backend/'
+      - '/frontend/'
+      - '/frontend/cdk/'
     schedule:
       interval: daily
       timezone: Asia/Tokyo
@@ -116,19 +28,6 @@ updates:
     assignees:
       - poad
     groups:
-      cdk-lambda:
+      npm:
         patterns:
-          - 'aws-cdk*'
-          - '@aws-cdk/*'
-          - '@swc/*'
-          - 'constructs'
-          - 'esbuild'
-          - 'regenerator-runtime'
-          - 'source-map-support'
-          - 'ts-node'
-      eslint-prettier:
-        patterns:
-          - '@typescript-eslint/*'
-          - 'eslint'
-          - 'eslint-*'
-          - 'prettier'
+          - '*'
