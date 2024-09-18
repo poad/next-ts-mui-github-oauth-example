@@ -1,9 +1,8 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { Client, gql, cacheExchange, fetchExchange } from '@urql/core';
 
-const GITHUB_OAUTH_CLIENT_ID = process.env.GITHUB_OAUTH_CLIENT_ID as string;
-const GITHUB_OAUTH_CLIENT_SECRET = process.env
-  .GITHUB_OAUTH_CLIENT_SECRET as string;
+const GITHUB_OAUTH_CLIENT_ID = process.env.GITHUB_OAUTH_CLIENT_ID ?? '';
+const GITHUB_OAUTH_CLIENT_SECRET = process.env.GITHUB_OAUTH_CLIENT_SECRET ?? '';
 
 const QUERY = gql`
   query {
