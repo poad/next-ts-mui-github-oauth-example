@@ -43,14 +43,14 @@
     "@storybook/test": "^8.4.2",
     "@types/react-no-ssr": "^1.1.7",
     "autoprefixer": "^10.4.20",
-    "msw": "^2.6.2",
+    "msw": "^2.6.4",
     "msw-storybook-addon": "^2.0.4",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "storybook": "^8.4.2",
     "styled-jsx": "^5.1.6",
     "tailwindcss": "^3.4.14",
     "typewind": "^0.2.0",
-    "uuid": "^11.0.2"
+    "uuid": "^11.0.3"
   },
   "engines": {
     "npm": "use pnpm please!",
