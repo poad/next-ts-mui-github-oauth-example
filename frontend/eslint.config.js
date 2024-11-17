@@ -14,6 +14,13 @@ import { FlatCompat } from '@eslint/eslintrc';
 const compat = new FlatCompat();
 
 export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
+  ...compat.config({
+    extends: ['plugin:storybook/recommended'],
+    ignorePatterns: ['!.storybook', 'storybook-static'],
+  }),
   {
     ignores: [
       '**/*.d.ts',
@@ -27,15 +34,6 @@ export default tseslint.config(
       '.storybook',
       'src/**/*.css'
     ],
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  ...compat.config({
-    extends: ['plugin:storybook/recommended'],
-    ignorePatterns: ['!.storybook', 'storybook-static'],
-  }),
-  {
     files: ['src/**/*.{jsx,ts,tsx}'],
     ...importPlugin.flatConfigs.recommended,
     ...importPlugin.flatConfigs.typescript,
