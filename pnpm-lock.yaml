@@ -45,8 +45,8 @@ importers:
   backend:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.168.0
-        version: 2.168.0(constructs@10.4.2)
+        specifier: ^2.169.0
+        version: 2.169.0(constructs@10.4.2)
       aws-lambda:
         specifier: ^1.0.7
         version: 1.0.7
@@ -67,8 +67,8 @@ importers:
         specifier: ^5.0.8
         version: 5.0.8(graphql@16.9.0)
       aws-cdk:
-        specifier: ^2.168.0
-        version: 2.168.0
+        specifier: ^2.169.0
+        version: 2.169.0
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -188,8 +188,8 @@ importers:
   frontend/cdk:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.168.0
-        version: 2.168.0(constructs@10.4.2)
+        specifier: ^2.169.0
+        version: 2.169.0(constructs@10.4.2)
       constructs:
         specifier: ^10.4.2
         version: 10.4.2
@@ -204,8 +204,8 @@ importers:
         specifier: ^22.9.1
         version: 22.9.1
       aws-cdk:
-        specifier: ^2.168.0
-        version: 2.168.0
+        specifier: ^2.169.0
+        version: 2.169.0
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.9.1)(typescript@5.6.3)
@@ -2927,8 +2927,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.168.0:
-    resolution: {integrity: sha512-eZkXYJaCLKRY1XzFKWHPr/7vSMMRmhz8p2oZacfxzr6XrzWcD5xtoNx2qIf215jaAI5Hewg31AMGZvQRQVNajw==}
+  aws-cdk-lib@2.169.0:
+    resolution: {integrity: sha512-JBwXMZNkXLCyIJmyK6HcA5UDaYYmJhQ0+ZmE10uTgNTqo/7lZpXYyQYES0SWGM4XrR18lFcH73RmHSAaoEyQhw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -2945,8 +2945,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.168.0:
-    resolution: {integrity: sha512-jYsHcXBknuocRsdDUMZbcDN4E9EQE2F8oxNb7DtD38bn4/7TJehexxYg9yeAOH1pA120bGwLDX8STcAmf0kGIg==}
+  aws-cdk@2.169.0:
+    resolution: {integrity: sha512-ZMe86k0ycRyvtX+prTRutzqGHLimdThx2UOCc+zDa28AtfLvr4ztJ88g6BKSE+WiUeOOQWVD1RVLxWqMujUitA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -3106,8 +3106,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001680:
-    resolution: {integrity: sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==}
+  caniuse-lite@1.0.30001683:
+    resolution: {integrity: sha512-iqmNnThZ0n70mNwvxpEC2nBJ037ZHZUoBI5Gorh1Mw6IlEAZujEoU1tXA628iZfzm7R9FvFzxbfdgml82a3k8Q==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -5017,8 +5017,8 @@ packages:
   prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
 
-  psl@1.10.0:
-    resolution: {integrity: sha512-KSKHEbjAnpUuAUserOq0FxGXCUrzC3WniuSJhvdbs102rL55266ZcHBqLWOsG30spQMlPdpy7icATiAQehg/iA==}
+  psl@1.11.0:
+    resolution: {integrity: sha512-pjFdcBXT4g061k/SQkzNCRnav+1RdIOgrcX8hs5eL3CEQcFZP9qT8T1RWYxGKT11rH1DdIW+kJRfCYykBJuerQ==}
 
   public-encrypt@4.0.3:
     resolution: {integrity: sha512-zVpa8oKZSz5bTMTFClc1fQOnyyEzpl5ozpi1B5YcvBrdohMjH2rfsBtyXcuNuwjsDIXmBYlF2N5FlJYhR29t8Q==}
@@ -9091,7 +9091,7 @@ snapshots:
   autoprefixer@10.4.20(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001680
+      caniuse-lite: 1.0.30001683
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -9102,7 +9102,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  aws-cdk-lib@2.168.0(constructs@10.4.2):
+  aws-cdk-lib@2.169.0(constructs@10.4.2):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.212
       '@aws-cdk/asset-kubectl-v20': 2.1.3
@@ -9110,7 +9110,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 38.0.1
       constructs: 10.4.2
 
-  aws-cdk@2.168.0:
+  aws-cdk@2.169.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -9257,7 +9257,7 @@ snapshots:
 
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001680
+      caniuse-lite: 1.0.30001683
       electron-to-chromium: 1.5.63
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
@@ -9309,7 +9309,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001680: {}
+  caniuse-lite@1.0.30001683: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
@@ -11010,7 +11010,7 @@ snapshots:
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.13
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001680
+      caniuse-lite: 1.0.30001683
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11410,7 +11410,7 @@ snapshots:
   prr@1.0.1:
     optional: true
 
-  psl@1.10.0:
+  psl@1.11.0:
     dependencies:
       punycode: 2.3.1
 
@@ -12118,7 +12118,7 @@ snapshots:
 
   tough-cookie@4.1.4:
     dependencies:
-      psl: 1.10.0
+      psl: 1.11.0
       punycode: 2.3.1
       universalify: 0.2.0
       url-parse: 1.5.10
