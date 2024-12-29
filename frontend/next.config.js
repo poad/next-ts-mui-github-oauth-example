@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
-const config =  {
+const config = {
   output: 'export',
   reactStrictMode: true,
-  swcMinify: true,
   trailingSlash: true,
   cleanDistDir: true,
   compiler: {

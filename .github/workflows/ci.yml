@@ -15,7 +15,7 @@ jobs:
   test:
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -33,12 +33,14 @@ jobs:
         run_install: |
           - recursive: true
             args: [--no-frozen-lockfile]
-        
+
+    - uses: oven-sh/setup-bun@v2
+            
     - name: Build (cdk)
-      run: pnpm build
+      run: bun run build
 
     - name: Build (frontend)
       env:
         CI: true
       working-directory: frontend
-      run: pnpm lint && pnpm -r build
+      run: bun run lint && pnpm -r build
