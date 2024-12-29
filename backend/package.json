@@ -9,8 +9,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint './{bin,lib,lambda}/**/*.ts'",
-    "lint-fix": "eslint --fix './{bin,lib,lambda}/**/*.ts'",
+    "lint": "eslint . --ignore-pattern '{**/*.d.ts,**/*.js}'",
+    "lint-fix": "eslint --fix . --ignore-pattern '{**/*.d.ts,**/*.js}'",
     "clean": "rimraf build"
   },
   "devDependencies": {
