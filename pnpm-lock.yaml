@@ -61,8 +61,8 @@ importers:
         specifier: ^8.10.146
         version: 8.10.146
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^22.10.3
+        version: 22.10.3
       '@urql/core':
         specifier: ^5.1.0
         version: 5.1.0(graphql@16.10.0)
@@ -74,7 +74,7 @@ importers:
         version: 0.24.2
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@22.10.2)(typescript@5.7.2)
+        version: 10.9.2(@types/node@22.10.3)(typescript@5.7.2)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -103,8 +103,8 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0(@emotion/cache@11.14.0)(@emotion/react@11.14.0(@types/react@18.3.18)(react@18.3.1))(@emotion/server@11.11.0)(@types/react@18.3.18)(next@15.1.3(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^22.10.3
+        version: 22.10.3
       '@types/react':
         specifier: ^18.3.18
         version: 18.3.18
@@ -162,10 +162,10 @@ importers:
         version: 10.4.20(postcss@8.4.49)
       msw:
         specifier: ^2.7.0
-        version: 2.7.0(@types/node@22.10.2)(typescript@5.7.2)
+        version: 2.7.0(@types/node@22.10.3)(typescript@5.7.2)
       msw-storybook-addon:
         specifier: ^2.0.4
-        version: 2.0.4(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))
+        version: 2.0.4(msw@2.7.0(@types/node@22.10.3)(typescript@5.7.2))
       postcss:
         specifier: ^8.4.49
         version: 8.4.49
@@ -177,7 +177,7 @@ importers:
         version: 5.1.6(@babel/core@7.26.0)(react@18.3.1)
       tailwindcss:
         specifier: ^3.4.17
-        version: 3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
+        version: 3.4.17(ts-node@10.9.2(@types/node@22.10.3)(typescript@5.7.2))
       typewind:
         specifier: ^0.2.0
         version: 0.2.0(jiti@1.21.7)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.7.0)
@@ -201,14 +201,14 @@ importers:
         version: 0.5.21
     devDependencies:
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^22.10.3
+        version: 22.10.3
       aws-cdk:
         specifier: ^2.173.4
         version: 2.173.4
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@22.10.2)(typescript@5.7.2)
+        version: 10.9.2(@types/node@22.10.3)(typescript@5.7.2)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -2535,11 +2535,11 @@ packages:
   '@types/node-fetch@2.6.12':
     resolution: {integrity: sha512-8nneRWKCg3rMtF69nLQJnOYUcbafYeFSjqkw3jCRLsqkWFlHaoQrr5mXmofFGOx3DKn7UfmBMyov8ySvLRVldA==}
 
-  '@types/node@18.19.68':
-    resolution: {integrity: sha512-QGtpFH1vB99ZmTa63K4/FU8twThj4fuVSBkGddTp7uIL/cuoLWIUSL2RcOaigBhfR+hg5pgGkBnkoOxrTVBMKw==}
+  '@types/node@18.19.69':
+    resolution: {integrity: sha512-ECPdY1nlaiO/Y6GUnwgtAAhLNaQ53AyIVz+eILxpEo5OvuqE6yWkqWBIb5dU0DqhKQtMeny+FBD3PK6lm7L5xQ==}
 
-  '@types/node@22.10.2':
-    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+  '@types/node@22.10.3':
+    resolution: {integrity: sha512-DifAyw4BkrufCILvD3ucnuN8eydUfc/C1GlyrnI+LK6543w5/L3VeVgf05o3B4fqSXP1dKYLOZsKfutpxPzZrw==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -7243,16 +7243,16 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
-  '@inquirer/confirm@5.1.1(@types/node@22.10.2)':
+  '@inquirer/confirm@5.1.1(@types/node@22.10.3)':
     dependencies:
-      '@inquirer/core': 10.1.2(@types/node@22.10.2)
-      '@inquirer/type': 3.0.2(@types/node@22.10.2)
-      '@types/node': 22.10.2
+      '@inquirer/core': 10.1.2(@types/node@22.10.3)
+      '@inquirer/type': 3.0.2(@types/node@22.10.3)
+      '@types/node': 22.10.3
 
-  '@inquirer/core@10.1.2(@types/node@22.10.2)':
+  '@inquirer/core@10.1.2(@types/node@22.10.3)':
     dependencies:
       '@inquirer/figures': 1.0.9
-      '@inquirer/type': 3.0.2(@types/node@22.10.2)
+      '@inquirer/type': 3.0.2(@types/node@22.10.3)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -7265,9 +7265,9 @@ snapshots:
 
   '@inquirer/figures@1.0.9': {}
 
-  '@inquirer/type@3.0.2(@types/node@22.10.2)':
+  '@inquirer/type@3.0.2(@types/node@22.10.3)':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -8076,7 +8076,7 @@ snapshots:
   '@storybook/builder-webpack5@8.4.7(esbuild@0.24.2)(storybook@8.4.7(prettier@2.8.8))(typescript@5.7.2)':
     dependencies:
       '@storybook/core-webpack': 8.4.7(storybook@8.4.7(prettier@2.8.8))
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       '@types/semver': 7.5.8
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
@@ -8164,7 +8164,7 @@ snapshots:
       '@storybook/node-logger': 7.6.20
       '@storybook/types': 7.6.20
       '@types/find-cache-dir': 3.2.1
-      '@types/node': 18.19.68
+      '@types/node': 18.19.69
       '@types/node-fetch': 2.6.12
       '@types/pretty-hrtime': 1.0.3
       chalk: 4.1.2
@@ -8197,7 +8197,7 @@ snapshots:
 
   '@storybook/core-webpack@8.4.7(storybook@8.4.7(prettier@2.8.8))':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       storybook: 8.4.7(prettier@2.8.8)
       ts-dedent: 2.2.0
 
@@ -8311,7 +8311,7 @@ snapshots:
       '@storybook/preset-react-webpack': 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(prettier@2.8.8)))(esbuild@0.24.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))(typescript@5.7.2)
       '@storybook/react': 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(prettier@2.8.8)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))(typescript@5.7.2)
       '@storybook/test': 8.4.7(storybook@8.4.7(prettier@2.8.8))
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       '@types/semver': 7.5.8
       babel-loader: 9.2.1(@babel/core@7.26.0)(webpack@5.97.1(esbuild@0.24.2))
       css-loader: 6.11.0(webpack@5.97.1(esbuild@0.24.2))
@@ -8365,7 +8365,7 @@ snapshots:
       '@storybook/core-webpack': 8.4.7(storybook@8.4.7(prettier@2.8.8))
       '@storybook/react': 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(prettier@2.8.8)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))(typescript@5.7.2)
       '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@5.7.2)(webpack@5.97.1(esbuild@0.24.2))
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       '@types/semver': 7.5.8
       find-up: 5.0.0
       magic-string: 0.30.17
@@ -8570,11 +8570,11 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
 
   '@types/cookie@0.6.0': {}
 
@@ -8594,7 +8594,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       '@types/qs': 6.9.17
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -8622,14 +8622,14 @@ snapshots:
 
   '@types/node-fetch@2.6.12':
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       form-data: 4.0.1
 
-  '@types/node@18.19.68':
+  '@types/node@18.19.69':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.10.2':
+  '@types/node@22.10.3':
     dependencies:
       undici-types: 6.20.0
 
@@ -8663,12 +8663,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       '@types/send': 0.17.4
 
   '@types/statuses@2.0.5': {}
@@ -10162,7 +10162,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       require-like: 0.1.2
 
   event-target-shim@5.0.1: {}
@@ -10720,7 +10720,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -10992,17 +10992,17 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw-storybook-addon@2.0.4(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2)):
+  msw-storybook-addon@2.0.4(msw@2.7.0(@types/node@22.10.3)(typescript@5.7.2)):
     dependencies:
       is-node-process: 1.2.0
-      msw: 2.7.0(@types/node@22.10.2)(typescript@5.7.2)
+      msw: 2.7.0(@types/node@22.10.3)(typescript@5.7.2)
 
-  msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2):
+  msw@2.7.0(@types/node@22.10.3)(typescript@5.7.2):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
-      '@inquirer/confirm': 5.1.1(@types/node@22.10.2)
+      '@inquirer/confirm': 5.1.1(@types/node@22.10.3)
       '@mswjs/interceptors': 0.37.3
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/until': 2.1.0
@@ -11345,13 +11345,13 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.49
 
-  postcss-load-config@4.0.2(postcss@8.4.49)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)):
+  postcss-load-config@4.0.2(postcss@8.4.49)(ts-node@10.9.2(@types/node@22.10.3)(typescript@5.7.2)):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.7.0
     optionalDependencies:
       postcss: 8.4.49
-      ts-node: 10.9.2(@types/node@22.10.2)(typescript@5.7.2)
+      ts-node: 10.9.2(@types/node@22.10.3)(typescript@5.7.2)
 
   postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.4.49)(yaml@2.7.0):
     dependencies:
@@ -12116,7 +12116,7 @@ snapshots:
 
   tailwind-merge@2.6.0: {}
 
-  tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)):
+  tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.10.3)(typescript@5.7.2)):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -12135,7 +12135,7 @@ snapshots:
       postcss: 8.4.49
       postcss-import: 15.1.0(postcss@8.4.49)
       postcss-js: 4.0.1(postcss@8.4.49)
-      postcss-load-config: 4.0.2(postcss@8.4.49)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
+      postcss-load-config: 4.0.2(postcss@8.4.49)(ts-node@10.9.2(@types/node@22.10.3)(typescript@5.7.2))
       postcss-nested: 6.2.0(postcss@8.4.49)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.10
@@ -12226,14 +12226,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2):
+  ts-node@10.9.2(@types/node@22.10.3)(typescript@5.7.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
