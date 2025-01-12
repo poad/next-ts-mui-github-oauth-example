@@ -18,7 +18,7 @@
     "pnpm": ">=8.7.0"
   },
   "devDependencies": {
-    "eslint": "^9.17.0",
+    "eslint": "^9.18.0",
     "eslint-config-import": "^0.13.0",
     "eslint-config-next": "^15.1.4",
     "eslint-plugin-flowtype": "^8.0.3",

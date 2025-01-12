@@ -51,7 +51,7 @@
     "styled-jsx": "^5.1.6",
     "tailwindcss": "^3.4.17",
     "typewind": "^0.2.0",
-    "uuid": "^11.0.4"
+    "uuid": "^11.0.5"
   },
   "engines": {
     "npm": "use pnpm please!",
