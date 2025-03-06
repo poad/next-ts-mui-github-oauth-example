@@ -2,3 +2,8 @@ packages:
   - 'frontend/cdk'
   - 'frontend'
   - 'backend'
+
+enable-pre-post-scripts: true
+legacy-peer-deps: true
+auto-install-peers: true
+strict-peer-dependencies: false
