@@ -5,7 +5,7 @@ import nextPlugin from '@next/eslint-plugin-next';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
-// @ts-expect-error ignore
+// @ts-expect-error ignore types
 import importPlugin from 'eslint-plugin-import';
 
 import tseslint from 'typescript-eslint';

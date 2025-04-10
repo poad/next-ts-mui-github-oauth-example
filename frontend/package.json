@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "pnpm dlx serve@latest out",
     "lint-fix": "eslint --fix './src/**/*.{ts,tsx}'",
@@ -20,21 +20,21 @@
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.4.10",
-    "@mui/material": "^6.4.10",
-    "@mui/material-nextjs": "^6.4.3",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "@mui/material-nextjs": "^7.0.2",
     "@types/node": "^22.14.0",
-    "@types/react": "^18.3.20",
+    "@types/react": "19.1.0",
     "@types/uuid": "^10.0.0",
-    "next": "^15.2.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "next": "15.3.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "typescript": "^5.8.3",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@next/eslint-plugin-next": "^15.2.4",
+    "@next/eslint-plugin-next": "15.3.0",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-interactions": "^8.6.12",
     "@storybook/addon-links": "^8.6.12",
@@ -63,5 +63,10 @@
   },
   "msw": {
     "workerDirectory": ".storybook/public"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.1.0"
+    }
   }
 }
